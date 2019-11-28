@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: scala-demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/demo?characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+      idle-timeout: 30000
+      connection-timeout: 30000
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    # 设置创表引擎为Innodb，不然默认为MyiSam
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+swagger:
+  base-package: com.gjing.project.scala.controller
+  title: scala学习的demo
