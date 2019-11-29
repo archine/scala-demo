@@ -1,15 +1,14 @@
 package com.gjing.project.scala.controller
 
-import cn.gjing.tools.common.annotation.{Exclude2, NotEmpty, NotNull}
+import cn.gjing.tools.common.annotation.NotEmpty
 import cn.gjing.tools.common.result.PageResult
 import com.gjing.project.scala.entity.Customer
 import com.gjing.project.scala.service.CustomerService
 import io.swagger.annotations.{Api, ApiImplicitParam, ApiImplicitParams, ApiOperation}
 import javax.annotation.Resource
-import lombok.NonNull
 import org.springframework.data.domain.PageRequest
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.{DeleteMapping, GetMapping, PostMapping, PutMapping, RestController}
+import org.springframework.web.bind.annotation._
 
 /**
  * @author Gjing

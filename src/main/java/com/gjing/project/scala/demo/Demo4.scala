@@ -8,6 +8,7 @@ object Demo4 {
   def main(args: Array[String]): Unit = {
 //    println(ApplyTest.age)
     ApplyTest.apply()
+    ApplyTest.apply().eat()
     val b = new ApplyTest()
     b()
   }
@@ -18,6 +19,10 @@ class ApplyTest{
   def apply(): ApplyTest = {
     println("啦啦啦")
     new ApplyTest()
+  }
+
+  def eat(): Unit = {
+    println("我是方法")
   }
 }
 

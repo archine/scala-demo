@@ -9,7 +9,7 @@ import scala.beans.BeanProperty
  **/
 @Entity
 @Table(name = "scala_customer")
-class Customer {
+class Customer extends {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,4 +23,6 @@ class Customer {
     this()
     this.customerName = customerName
   }
+
+  override def toString: String = s"Customer($id,$customerName)"
 }
